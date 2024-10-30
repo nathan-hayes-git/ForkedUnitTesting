@@ -22,7 +22,7 @@ public class BankTest {
     public void testDebitFunction() {
         Bank account = new Bank("Nassim", "Karimi");
         account.credit(100.0);
-        account.debit(50.0);
+        account.debit(200.0);
         double resultingBalance = account.getBalance();
         assertEquals(50.0, resultingBalance);
     }

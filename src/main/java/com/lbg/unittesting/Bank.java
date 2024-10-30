@@ -21,15 +21,21 @@ public class Bank {
     }
 
     public void debit(double amountDebited) {
-        double currentBalance = this.getBalance();
-        currentBalance -= amountDebited;
-        this.setBalance(currentBalance);
+
+        double tempBalance = this.getBalance();
+        tempBalance -= amountDebited;
+        if(tempBalance < 15) {
+
+            System.out.println("This transaction is invalid!");
+        } else {
+            this.setBalance(tempBalance);
+        }
     }
 
     public Bank(String firstname, String lastname){
         this.firstname = firstname;
         this.lastname = lastname;
-        this.setBalance(0.0);
+        this.setBalance(15.0);
     }
 
     public String getAccountHolderName(){
