@@ -14,16 +14,16 @@ public class Bank {
         this.balance = balance;
     }
 
-    public void credit(double amountCredited) {
+    public void deposit(double amountDeposited) {
         double currentBalance = this.getBalance();
-        currentBalance += amountCredited;
+        currentBalance += amountDeposited;
         this.setBalance(currentBalance);
     }
 
-    public void debit(double amountDebited) {
+    public void withdraw(double amountWithdrawn) {
 
         double tempBalance = this.getBalance();
-        tempBalance -= amountDebited;
+        tempBalance -= amountWithdrawn;
         if(tempBalance < 15) {
 
             System.out.println("This transaction is invalid!");
