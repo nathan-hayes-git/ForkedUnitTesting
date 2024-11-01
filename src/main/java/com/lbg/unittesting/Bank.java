@@ -20,15 +20,15 @@ public class Bank {
         this.setBalance(currentBalance);
     }
 
-    public void withdraw(double amountWithdrawn) {
+    public String withdraw(double amountWithdrawn) {
 
         double tempBalance = this.getBalance();
         tempBalance -= amountWithdrawn;
         if(tempBalance < 15) {
-
-            System.out.println("This transaction is invalid!");
+            return "Transaction is invalid";
         } else {
             this.setBalance(tempBalance);
+            return "Success";
         }
     }
 

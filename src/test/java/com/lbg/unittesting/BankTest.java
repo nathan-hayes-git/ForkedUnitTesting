@@ -13,7 +13,7 @@ public class BankTest {
     @Test
     public void testCreditFunction() {
         Bank account = new Bank("Aaryan","Mishra");
-        account.credit(100.0);
+        account.deposit(100.0);
         double resultingBalance = account.getBalance();
         assertEquals(100.0, resultingBalance);
     }
@@ -21,8 +21,8 @@ public class BankTest {
     @Test
     public void testDebitFunction() {
         Bank account = new Bank("Nassim", "Karimi");
-        account.credit(100.0);
-        account.debit(200.0);
+        account.deposit(100.0);
+        account.withdraw(200.0);
         double resultingBalance = account.getBalance();
         assertEquals(50.0, resultingBalance);
     }
